@@ -11,7 +11,8 @@ struct ContentView: View {
                             CityWeatherView(cityVM: cityVM)
                         }.padding(.top, 10)
                     }.padding(.top, 40)
-        }.background(LinearGradient(gradient: Gradient(colors: [Color.blue, Color("MainBackground")]), startPoint: .topLeading, endPoint: .bottomTrailing))
+        }.background(LinearGradient(gradient: Gradient(colors: [Color("MainBackgroundTop"),
+            Color("MainBackgroundBottom")]), startPoint: .topLeading, endPoint: .bottomTrailing))
                 .edgesIgnoringSafeArea(.all)
     }
 }

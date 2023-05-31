@@ -42,7 +42,7 @@ struct TodayWeather: View {
                 .padding()
                 .font(.title3)
                 .foregroundColor(color)
-                .background(RoundedRectangle(cornerRadius: 10).fill(Color.white)) //kvadrat
+                .background(RoundedRectangle(cornerRadius: 10).fill(Color.white))
             
             Text(title)
         }

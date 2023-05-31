@@ -1,10 +1,3 @@
-//
-//  LoadingView.swift
-//  HelloWeather
-//
-//  Created by Anita Stashevskaya on 29.05.2023.
-//
-
 import SwiftUI
 
 struct LoadingView: View {
@@ -12,6 +5,7 @@ struct LoadingView: View {
         ProgressView()
             .progressViewStyle(CircularProgressViewStyle(tint: .white))
             .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color.black)
         
     }
 }
