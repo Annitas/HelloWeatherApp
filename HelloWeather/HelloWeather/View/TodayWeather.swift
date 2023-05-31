@@ -14,14 +14,14 @@ struct TodayWeather: View {
                     .frame(width: 100, height: 100)
                 
                 VStack (alignment: .leading) {
-                    Text("\(cityVM.temperature)ºC")
+                    Text("\(cityVM.temperature)".dropLast(2) + " ºC")
                         .font(.system(size: 42))
                     Text("\(cityVM.conditions)")
                 }
             }
             HStack {
                 Spacer()
-                widgetView(image: "wind", color: .green, title: "\(cityVM.windSpeed)")
+                widgetView(image: "wind", color: .green, title: String("\(cityVM.windSpeed)".dropLast(2)))
                 Spacer()
                 widgetView(image: "drop.fill", color: .blue, title: "\(cityVM.humidity)")
                 Spacer()

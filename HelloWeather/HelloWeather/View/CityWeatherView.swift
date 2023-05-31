@@ -7,8 +7,8 @@ struct CityWeatherView: View {
             CityNameView(city: cityVM.city, date: cityVM.date)
                 .shadow(radius: 0)
             TodayWeather(cityVM: cityVM)
-            WeekWeatherView(cityVM: cityVM)
             DailyWeatherView(cityVM: cityVM)
+            WeekWeatherView(cityVM: cityVM)
         }.padding(.bottom, 30 )
     }
 }

@@ -7,4 +7,3 @@ struct API {
         return "\(BaseURLString)onecall?lat=\(lat)&lon=\(lon)&exclude=minutely&appid=\(key)&units=metric"
     }
 }
-//onecall?lat=37.5485&lon=-121.9886&exclude=minutely&appid=d2b758466054981c7a9596f7549c12be&units=metric

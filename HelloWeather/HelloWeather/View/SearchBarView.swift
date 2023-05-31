@@ -22,13 +22,14 @@ struct SearchBarView: View {
         .foregroundColor(.white)
         .padding()
         .background(ZStack (alignment: .leading) {
-            Image(systemName: "magnifyingglass.circle.fill")
-                                    .font(.title3)
-                                    .foregroundColor(.white)
-                                    .padding(.leading, 10)
-            RoundedRectangle(cornerRadius: 10)
-                .fill(Color.blue.opacity(0.5))
-        })
+            
+//            Image(systemName: "magnifyingglass.circle.fill")
+//                                    .font(.title3)
+//                                    .foregroundColor(.white)
+//                                    .padding(.leading, 10)
+//            RoundedRectangle(cornerRadius: 10)
+//                .fill(Color.blue.opacity(0.5))
+        }).background(Color.blue)
     }
 }
 
