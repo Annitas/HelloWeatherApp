@@ -2,7 +2,7 @@ import SwiftUI
 
 struct SearchBarView: View {
     @ObservedObject var cityVM: CityView
-    @State private var searchTerm = "Omsk"
+    @State private var searchTerm = ""
    
     var body: some View {
         HStack {
@@ -10,11 +10,12 @@ struct SearchBarView: View {
                 .padding(.leading, 20)
             Button {
                 cityVM.city = searchTerm
+                searchTerm = ""
             } label: {
                 ZStack {
                     RoundedRectangle(cornerRadius: 10)
-                        .fill(Color.blue)
-                    Image(systemName: "location.fill")
+                        .fill(Color("SearchButton").opacity(0.5))
+                    Image(systemName: "magnifyingglass.circle")
                 }
             }
             .frame(width: 50, height: 50)

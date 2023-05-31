@@ -14,10 +14,11 @@ struct DailyWeatherView: View {
                 }
             }
         }
+        .background(Color("HourlyBackground"))
     }
     
     private func getHourlyView(hour: String, image: Image, temp: String) -> some View {
-        VStack(spacing: 20) {
+        VStack(spacing: 20.0) {
             Text(hour)
             image
                 .foregroundColor(.white)
@@ -31,7 +32,7 @@ struct DailyWeatherView: View {
     }
 }
 
-struct WeekWeatherView_Previews: PreviewProvider {
+struct DailyWeatherView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }

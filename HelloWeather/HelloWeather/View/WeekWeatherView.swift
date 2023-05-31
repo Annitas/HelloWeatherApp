@@ -6,12 +6,12 @@ struct WeekWeatherView: View {
     var body: some View {
         ForEach(cityVM.weather.daily) { weather in
             LazyVStack {
-                dailyCell(weather: weather)
+                weeklyCell(weather: weather)
             }
         }
     }
     
-    private func dailyCell(weather: DailyWeather) -> some View{
+    private func weeklyCell(weather: DailyWeather) -> some View{
         HStack {
             Text(cityVM.getDayFor(timestamp: weather.dt).uppercased())
                 .frame(width: 50)
@@ -27,13 +27,12 @@ struct WeekWeatherView: View {
         .foregroundColor(.white)
         .padding(.horizontal, 40)
         .padding(.vertical, 15)
-        .background(RoundedRectangle(cornerRadius: 5).fill(LinearGradient(gradient: Gradient(colors: [Color("#73d6fa"), Color("#ccf0fc")]), startPoint: .topLeading, endPoint: .bottomTrailing)))
         .shadow(color: Color.white.opacity(0.1), radius: 2, x: -2, y: -2)
         .shadow(color: Color.black.opacity(0.2), radius: 2, x: 2, y: 2)
     }
 }
 
-struct DailyWeatherView_Previews: PreviewProvider {
+struct WeeklyWeatherView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }

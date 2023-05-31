@@ -48,7 +48,7 @@ final class CityView: ObservableObject {
     
     var conditions: String {
         if weather.current.weather.count > 0 {
-            return weather.current.weather[0].main //?
+            return weather.current.weather[0].main
         }
         return ""
     }
